@@ -1,0 +1,48 @@
+
+<%- include ('partials/header') %>
+
+
+<!--
+* Desarrollador: Cesar Alberto Garci­a Aranda
+*  Esta parte es todo el codigo de la tabla  
+-->
+
+<div class="row">
+  <div class="container centered">
+    <center><h1 class="display-4">Reporte De Usuarios En BD</h1></center>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <div class="container">
+
+                  <table class="table table-dark">
+                    <thead >
+                      <tr>
+                        <td>Fecha</td>
+                        <td>Usuario</td>
+                        <td>Descripcion</td>
+                        <td>Tabla</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% if (data) { %>
+                        <% for(var i = 0; i < data.length; i++) { %>
+                          <tr>
+                            <td><%= data[i].fecha %></td>
+                            <td><%= data[i].usuario %></td>
+                            <td><%= data[i].descripcion %></td>
+                            <td><%= data[i].tabla %></td>
+                          </tr>
+                        <% } %>
+                      <% } %>
+                    </tbody>
+                  </table>
+
+          </div>
+            </div>
+        </div>
+      </div>
+<%- include ('partials/footer') %>
